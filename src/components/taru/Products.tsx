@@ -5,6 +5,7 @@ import plate from "@/assets/product-plate.png";
 import bowl from "@/assets/product-bowl.png";
 import tray from "@/assets/product-tray.png";
 import cup from "@/assets/product-cup.png";
+import palmLeaf from "@/assets/palm-leaf.png";
 
 const products = [
   { img: plate, name: "Palm Leaf Plates", tag: "Biodegradable & Durable", desc: "A plate that began as a leaf. Sturdy enough for a feast, gentle enough to return to the earth.", n: "01" },
