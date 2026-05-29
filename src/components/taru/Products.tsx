@@ -49,18 +49,21 @@ export function Products() {
 
   return (
     <section ref={ref} id="products" className="relative bg-beige text-primary-forest overflow-hidden">
-      {/* Decorative full palm leaf — intentionally visible end-to-end */}
+      {/* Tasteful complete palm frond beside the header — not behind any product */}
       <img
-        src={palmLeaf}
+        src={leafFrond}
         alt=""
         aria-hidden
-        className="pointer-events-none absolute -left-10 md:left-0 top-24 w-[55vw] max-w-[640px] opacity-90 select-none drop-shadow-[0_30px_60px_rgba(8,28,21,0.15)] -rotate-[8deg]"
+        loading="lazy"
+        className="pointer-events-none absolute -left-16 md:-left-8 top-16 w-[44vw] max-w-[460px] opacity-90 select-none drop-shadow-[0_30px_60px_rgba(8,28,21,0.18)] -rotate-[18deg]"
       />
+      {/* Faint silhouette accent in the top-right corner */}
       <img
-        src={palmLeaf}
+        src={leafSilhouette}
         alt=""
         aria-hidden
-        className="pointer-events-none absolute -right-24 top-[8%] w-[280px] opacity-20 rotate-[160deg] select-none"
+        loading="lazy"
+        className="pointer-events-none absolute -right-20 -top-10 w-[320px] opacity-[0.08] rotate-180 select-none"
       />
 
       <div className="relative px-8 md:px-20 pt-32 pb-6 max-w-[1500px] mx-auto">
@@ -71,6 +74,7 @@ export function Products() {
           </h2>
         </div>
       </div>
+
 
       {products.map((p, i) => (
         <div
