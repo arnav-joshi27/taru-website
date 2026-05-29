@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import palmLeaf from "@/assets/palm-leaf.png";
+import leafFan from "@/assets/leaf-fan.png";
 
 export function Footer() {
   return (
     <footer id="contact" className="relative bg-primary-forest text-beige overflow-hidden pt-40 pb-12">
       <motion.img
-        src={palmLeaf}
+        src={leafFan}
         alt=""
         initial={{ rotate: -10, opacity: 0 }}
         whileInView={{ rotate: 0, opacity: 0.15 }}

@@ -1,6 +1,10 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import palmLeaf from "@/assets/palm-leaf.png";
+import leafFrond from "@/assets/leaf-frond.png";
+import leafAreca from "@/assets/leaf-areca.png";
+
+const leafVariants = [palmLeaf, leafFrond, leafAreca];
 
 export function FloatingLeaves() {
   const ref = useRef<HTMLDivElement>(null);
@@ -29,10 +33,10 @@ export function FloatingLeaves() {
 
   return (
     <div ref={ref} className="fixed inset-0 pointer-events-none z-30 overflow-hidden">
-      {Array.from({ length: 5 }).map((_, i) => (
+      {Array.from({ length: 6 }).map((_, i) => (
         <img
           key={i}
-          src={palmLeaf}
+          src={leafVariants[i % leafVariants.length]}
           alt=""
           className="floating-leaf absolute w-32 opacity-0"
           style={{ filter: "blur(0.5px)" }}
