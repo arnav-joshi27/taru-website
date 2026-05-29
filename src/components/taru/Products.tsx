@@ -5,6 +5,7 @@ import plate from "@/assets/product-plate.png";
 import bowl from "@/assets/product-bowl.png";
 import tray from "@/assets/product-tray.png";
 import cup from "@/assets/product-cup.png";
+import palmLeaf from "@/assets/palm-leaf.png";
 
 const products = [
   { img: plate, name: "Palm Leaf Plates", tag: "Biodegradable & Durable", desc: "A plate that began as a leaf. Sturdy enough for a feast, gentle enough to return to the earth.", n: "01" },
@@ -45,32 +46,48 @@ export function Products() {
   }, []);
 
   return (
-    <section ref={ref} id="products" className="relative bg-beige text-primary-forest">
-      <div className="px-8 md:px-20 pt-32 pb-10 max-w-[1500px] mx-auto">
-        <span className="text-xs uppercase tracking-[0.3em] text-palm">Our Products</span>
-        <h2 className="font-display text-5xl md:text-7xl mt-4 max-w-3xl leading-[0.95]">
-          Crafted by nature, <em className="text-palm not-italic">made for you.</em>
-        </h2>
+    <section ref={ref} id="products" className="relative bg-beige text-primary-forest overflow-hidden">
+      {/* Decorative full palm leaf — intentionally visible end-to-end */}
+      <img
+        src={palmLeaf}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -left-10 md:left-0 top-24 w-[55vw] max-w-[640px] opacity-90 select-none drop-shadow-[0_30px_60px_rgba(8,28,21,0.15)] -rotate-[8deg]"
+      />
+      <img
+        src={palmLeaf}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -right-24 top-[8%] w-[280px] opacity-20 rotate-[160deg] select-none"
+      />
+
+      <div className="relative px-8 md:px-20 pt-32 pb-6 max-w-[1500px] mx-auto">
+        <div className="md:pl-[42%]">
+          <span className="text-xs uppercase tracking-[0.3em] text-palm">Our Products</span>
+          <h2 className="font-display text-5xl md:text-7xl mt-4 max-w-3xl leading-[0.95]">
+            Crafted by nature, <em className="text-palm not-italic">made for you.</em>
+          </h2>
+        </div>
       </div>
 
       {products.map((p, i) => (
         <div
           key={p.n}
-          className={`product-panel relative min-h-screen flex items-center px-8 md:px-20 py-20 ${
+          className={`product-panel relative flex items-center px-8 md:px-20 py-14 md:py-20 ${
             i % 2 === 0 ? "" : "flex-row-reverse"
           }`}
         >
-          <div className={`max-w-[1500px] mx-auto w-full grid md:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? "md:[direction:rtl]" : ""}`}>
+          <div className={`max-w-[1500px] mx-auto w-full grid md:grid-cols-2 gap-10 md:gap-12 items-center ${i % 2 === 1 ? "md:[direction:rtl]" : ""}`}>
             <div className="relative flex items-center justify-center md:[direction:ltr]">
               <div className="absolute w-[80%] aspect-square rounded-full bg-palm/10 blur-3xl" />
-              <img src={p.img} alt={p.name} loading="lazy" className="product-img relative w-[80%] max-w-[480px] drop-shadow-[0_60px_80px_rgba(8,28,21,0.3)]" />
+              <img src={p.img} alt={p.name} loading="lazy" className="product-img relative w-[70%] max-w-[420px] drop-shadow-[0_60px_80px_rgba(8,28,21,0.3)]" />
             </div>
-            <div className="product-text space-y-6 md:[direction:ltr]">
+            <div className="product-text space-y-5 md:[direction:ltr]">
               <span className="font-mono text-xs text-palm/60 tracking-widest">{p.n} / 04</span>
               <span className="block text-xs uppercase tracking-[0.3em] text-palm">{p.tag}</span>
               <h3 className="font-display text-5xl md:text-7xl leading-[0.95]">{p.name}</h3>
               <p className="text-lg text-primary-forest/70 max-w-md leading-relaxed">{p.desc}</p>
-              <div className="flex gap-6 pt-4 text-xs uppercase tracking-[0.2em] text-primary-forest/60">
+              <div className="flex flex-wrap gap-6 pt-3 text-xs uppercase tracking-[0.2em] text-primary-forest/60">
                 <span>✦ Compostable</span>
                 <span>✦ Microwave Safe</span>
                 <span>✦ Plastic Free</span>
