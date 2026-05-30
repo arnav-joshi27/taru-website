@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import heroForest from "@/assets/hero-forest.jpg";
-import palmLeaf from "@/assets/palm-leaf.png";
+import palmLeaf from "@/assets/hero-palm-leaf.png";
 import seedling from "@/assets/seedling.png";
 
 export function Hero() {
