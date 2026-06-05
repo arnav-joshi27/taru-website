@@ -51,18 +51,19 @@ export function Transformation() {
         </div>
         {/* Text */}
         <div className="space-y-8">
-          <span className="tf-step text-xs uppercase tracking-[0.3em] text-palm">What is TARU?</span>
+          <span className="tf-step text-xs uppercase tracking-[0.3em] text-palm">Sustainability in Action</span>
           <h2 className="tf-step font-display text-5xl md:text-7xl leading-[0.95] text-balance">
-            From Nature<br />
-            <em className="text-palm not-italic">to Everyday Life.</em>
+            Rooted in Nature.<br />
+            <em className="text-palm not-italic">Built for Tomorrow.</em>
           </h2>
           <p className="tf-step text-lg leading-relaxed text-primary-forest/70 max-w-md">
-            Palm leaves once discarded are transformed into durable, biodegradable
-            objects that celebrate craftsmanship, conscious living, and the quiet
-            dignity of natural materials.
+            Every product begins as a fallen palm leaf — nature's gift, not waste. 
+            Through ethical craftsmanship and community-driven production, 
+            we turn what was discarded into lasting, biodegradable essentials 
+            that honor people, planet, and the promise of a greener future.
           </p>
           <button className="tf-step group inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em] border-b border-primary-forest pb-2 hover:text-palm transition-colors">
-            Know More About Us
+            Discover Our Impact
             <span className="group-hover:translate-x-2 transition-transform">→</span>
           </button>
         </div>
