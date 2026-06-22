@@ -124,7 +124,7 @@ export function Journey() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-primary-forest via-primary-forest/30 to-transparent" />
                         <span className="md:hidden absolute top-4 left-4 font-mono text-xs text-accent-green/80 tracking-widest">
-                          {s.n} / 06
+                          {s.n} / 0{stages.length}
                         </span>
                       </div>
                       <div className={`p-7 md:p-9 ${isLeft ? "md:text-right" : "md:text-left"}`}>
