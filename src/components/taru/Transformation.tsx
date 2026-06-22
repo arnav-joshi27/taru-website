@@ -2,7 +2,8 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import palmLeaf from "@/assets/palm-leaf.png";
-import bowl from "@/assets/product-bowl.png";
+import bagAsset from "@/assets/prod-bag.jpg.asset.json";
+const bowl = bagAsset.url;
 
 export function Transformation() {
   const ref = useRef<HTMLDivElement>(null);
