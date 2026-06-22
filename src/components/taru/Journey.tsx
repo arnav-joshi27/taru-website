@@ -8,12 +8,10 @@ import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
 
 const stages = [
-  { n: "01", t: "Palm Collection", d: "Fallen palm leaves are gathered responsibly from local farming communities, giving discarded nature a second life.", img: g1, icon: "❋" },
-  { n: "02", t: "Cleaning", d: "Each leaf is washed, sun-dried, and inspected — preparing the raw fibre for transformation.", img: g2, icon: "❅" },
-  { n: "03", t: "Processing", d: "Heat-pressed under controlled temperatures, the leaf reveals its strength and natural form.", img: g3, icon: "≋" },
-  { n: "04", t: "Craftsmanship", d: "Skilled artisans shape every piece by hand, weaving generational knowledge into modern utility.", img: g4, icon: "✋" },
-  { n: "05", t: "Product Creation", d: "Plates, bowls, trays — born of the forest, designed for the table, returning back to the soil.", img: g1, icon: "◍" },
-  { n: "06", t: "Impact", d: "Each piece supports a family, reduces waste, and plants the seed of a regenerative economy.", img: g2, icon: "✺" },
+  { n: "01", t: "Collect", d: "We recover dried leaves, fibres, and biodegradable plant waste that would otherwise go unused — working alongside farming and rural communities.", img: g1, icon: "❋" },
+  { n: "02", t: "Clean & Prepare", d: "Each material is washed, sun-dried, and inspected — readying nature's raw gift for its second life.", img: g2, icon: "❅" },
+  { n: "03", t: "Transform", d: "Through gentle heat, time, and craft, we upcycle natural materials into durable, biodegradable forms — no plastics, no chemicals.", img: g3, icon: "≋" },
+  { n: "04", t: "Craft & Share", d: "Skilled artisans shape every piece by hand, weaving generational knowledge into everyday essentials that return safely to the earth.", img: g4, icon: "✋" },
 ];
 
 export function Journey() {
