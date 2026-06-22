@@ -63,10 +63,11 @@ export function Transformation() {
             we turn what was discarded into lasting, biodegradable essentials 
             that honor people, planet, and the promise of a greener future.
           </p>
-          <button className="tf-step group inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em] border-b border-primary-forest pb-2 hover:text-palm transition-colors">
+          <a href="#impact" className="tf-step group inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em] border-b border-primary-forest pb-2 hover:text-palm transition-colors w-fit">
             Discover Our Impact
             <span className="group-hover:translate-x-2 transition-transform">→</span>
-          </button>
+          </a>
+
         </div>
       </div>
     </section>
