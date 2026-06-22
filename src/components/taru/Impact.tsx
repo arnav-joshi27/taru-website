@@ -1,73 +1,97 @@
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion } from "framer-motion";
 
-const metrics = [
-  { n: 10000, suffix: "+", label: "Palm Leaves Reused" },
-  { n: 500, suffix: "+", label: "Eco Products Created" },
-  { n: 300, suffix: "+", label: "Lives Impacted" },
-  { n: 100, suffix: "%", label: "Natural Material" },
+const primary = [
+  { n: "12", title: "Responsible Consumption & Production", desc: "Designing biodegradable goods that close the loop on waste." },
+  { n: "08", title: "Decent Work & Economic Growth", desc: "Dignified livelihoods for rural artisans and women collectives." },
+  { n: "13", title: "Climate Action", desc: "Lower-carbon alternatives to single-use plastics, at scale." },
+];
+
+const supporting = [
+  { n: "01", title: "No Poverty" },
+  { n: "11", title: "Sustainable Cities & Communities" },
+  { n: "15", title: "Life on Land" },
+  { n: "17", title: "Partnerships for the Goals" },
+];
+
+const pillars = [
+  { t: "Circular Economy", d: "Materials that re-enter nature, never landfill." },
+  { t: "Responsible Consumption", d: "Everyday essentials, designed with intention." },
+  { t: "Community Empowerment", d: "Skill, dignity, and income for the makers." },
+  { t: "Sustainable Innovation", d: "New biodegradable materials, conscious design." },
+  { t: "Environmental Stewardship", d: "Caring for the land that holds us all." },
 ];
 
 export function Impact() {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.utils.toArray<HTMLElement>(".metric").forEach((m) => {
-        const target = Number(m.dataset.target);
-        const el = m.querySelector(".num") as HTMLElement;
-        const obj = { v: 0 };
-        gsap.to(obj, {
-          v: target,
-          duration: 2.5,
-          ease: "power2.out",
-          scrollTrigger: { trigger: m, start: "top 85%" },
-          onUpdate: () => { el.textContent = Math.round(obj.v).toLocaleString(); },
-        });
-      });
-      // Trees grow
-      gsap.from(".tree", {
-        scaleY: 0,
-        transformOrigin: "bottom center",
-        duration: 1.5,
-        stagger: 0.15,
-        ease: "power3.out",
-        scrollTrigger: { trigger: ref.current, start: "top 60%" },
-      });
-    }, ref);
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section ref={ref} id="impact" className="relative py-32 overflow-hidden bg-forest">
+    <section id="impact" className="relative py-32 bg-primary-forest overflow-hidden">
       <div className="grain absolute inset-0" />
       <div className="relative max-w-[1500px] mx-auto px-8 md:px-20">
-        <span className="text-xs uppercase tracking-[0.3em] text-accent-green/70">Our Living Impact</span>
-        <h2 className="font-display text-5xl md:text-7xl text-beige mt-4 max-w-3xl">
-          Numbers that <em className="text-accent-green not-italic">grow back.</em>
-        </h2>
-
-        {/* Tree silhouettes */}
-        <div className="relative mt-20 h-48 flex items-end justify-around">
-          {Array.from({ length: 12 }).map((_, i) => (
-            <svg key={i} className="tree" width="40" height={80 + Math.random() * 100} viewBox="0 0 40 200" fill="none">
-              <line x1="20" y1="200" x2="20" y2="120" stroke="oklch(0.42 0.09 155)" strokeWidth="3" />
-              <circle cx="20" cy="80" r="40" fill="oklch(0.42 0.09 155)" opacity="0.7" />
-              <circle cx="10" cy="100" r="25" fill="oklch(0.55 0.12 155)" opacity="0.6" />
-              <circle cx="30" cy="100" r="25" fill="oklch(0.55 0.12 155)" opacity="0.6" />
-            </svg>
-          ))}
+        <div className="max-w-3xl">
+          <span className="text-xs uppercase tracking-[0.3em] text-accent-green/70">Our Impact</span>
+          <h2 className="font-display text-5xl md:text-7xl text-beige mt-4 leading-[0.95]">
+            Aligned with the <em className="text-accent-green not-italic">Global Goals.</em>
+          </h2>
+          <p className="text-beige/60 mt-6 leading-relaxed max-w-xl">
+            Taru's work directly advances the United Nations Sustainable Development Goals —
+            weaving circular economy, community empowerment, and environmental stewardship into every product.
+          </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-accent-green/10 mt-20 rounded-2xl overflow-hidden">
-          {metrics.map((m) => (
-            <div key={m.label} data-target={m.n} className="metric bg-primary-forest p-10 md:p-14">
-              <div className="font-display text-5xl md:text-7xl text-accent-green">
-                <span className="num">0</span><span>{m.suffix}</span>
+        {/* Primary SDGs */}
+        <div className="mt-20">
+          <div className="text-xs uppercase tracking-[0.2em] text-accent-green/70 mb-6">Primary SDGs</div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {primary.map((s, i) => (
+              <motion.div
+                key={s.n}
+                initial={{ y: 40, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.7, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                viewport={{ once: true }}
+                className="glass rounded-2xl p-8 border border-accent-green/15 hover:border-accent-green/40 transition-colors"
+              >
+                <div className="flex items-baseline gap-3">
+                  <span className="font-display text-6xl text-accent-green">{s.n}</span>
+                  <span className="font-mono text-[10px] tracking-widest text-accent-green/60">SDG</span>
+                </div>
+                <h3 className="font-display text-2xl text-beige mt-4 leading-tight">{s.title}</h3>
+                <p className="text-beige/60 text-sm mt-3 leading-relaxed">{s.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Supporting SDGs */}
+        <div className="mt-16">
+          <div className="text-xs uppercase tracking-[0.2em] text-accent-green/70 mb-6">Supporting SDGs</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {supporting.map((s, i) => (
+              <motion.div
+                key={s.n}
+                initial={{ scale: 0.9, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                viewport={{ once: true }}
+                className="glass rounded-xl p-6 border border-beige/10 flex items-center gap-4"
+              >
+                <span className="font-display text-3xl text-accent-green/80">{s.n}</span>
+                <span className="text-beige/80 text-sm leading-snug">{s.title}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Pillars */}
+        <div className="mt-24">
+          <div className="text-xs uppercase tracking-[0.2em] text-accent-green/70 mb-6">What We Stand For</div>
+          <div className="grid md:grid-cols-5 gap-px bg-accent-green/10 rounded-2xl overflow-hidden">
+            {pillars.map((p) => (
+              <div key={p.t} className="bg-primary-forest p-8">
+                <h4 className="font-display text-xl text-beige leading-tight">{p.t}</h4>
+                <p className="text-beige/55 text-sm mt-3 leading-relaxed">{p.d}</p>
               </div>
-              <div className="mt-4 text-xs uppercase tracking-[0.2em] text-beige/60">{m.label}</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

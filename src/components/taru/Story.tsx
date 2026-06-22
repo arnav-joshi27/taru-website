@@ -1,11 +1,12 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import forest from "@/assets/forest-parallax.jpg";
+import bananaLeaves from "@/assets/story-banana-leaves.png.asset.json";
+import fibres from "@/assets/story-fibres.png.asset.json";
 
 const paragraphs = [
-  "Taru began with a question — what if the leaves we sweep away could feed a family?",
-  "In quiet villages where palms stand tall, we found generations of skill, waiting.",
+  "Taru began with a question — what if what nature sheds could feed a family?",
+  "In quiet villages, we found generations of skill — hands that weave leaves, fibres, and grass into beauty.",
   "We listened. We learned. We wove tradition into a future the planet can hold.",
   "Today, every Taru product carries a story — of soil, of sun, of stubborn hope.",
 ];
@@ -32,9 +33,9 @@ export function Story() {
   }, []);
 
   return (
-    <section ref={ref} className="relative py-40 overflow-hidden">
+    <section ref={ref} id="story" className="relative py-40 overflow-hidden">
       <div className="story-bg absolute inset-0 -inset-y-32">
-        <img src={forest} alt="" loading="lazy" className="w-full h-full object-cover" />
+        <img src={bananaLeaves.url} alt="" loading="lazy" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-primary-forest/85" />
       </div>
       <div className="relative max-w-5xl mx-auto px-8 md:px-20 space-y-20">
@@ -46,6 +47,18 @@ export function Story() {
             ))}
           </p>
         ))}
+
+        <div className="story-line grid md:grid-cols-2 gap-6 pt-4">
+          <img src={fibres.url} alt="Natural plant fibres" loading="lazy" className="rounded-2xl aspect-[4/5] object-cover" />
+          <div className="flex flex-col justify-end">
+            <p className="text-beige/70 text-lg leading-relaxed">
+              From banana leaves and palm fronds to natural fibres and rattan —
+              we work with whatever nature offers, transforming what was overlooked
+              into objects of everyday beauty.
+            </p>
+          </div>
+        </div>
+
         <blockquote className="story-line border-l-2 border-accent-green pl-8 mt-20">
           <p className="font-display italic text-2xl md:text-3xl text-beige/80">
             {"\""}We're not making products. We're tending a relationship — between people and the land that holds us.{"\""}

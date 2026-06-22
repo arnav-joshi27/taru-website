@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import taruLogo from "@/assets/taru-logo.png.asset.json";
 
-const links = ["Home", "Story", "Process", "Products", "Impact", "Team"];
+const links = ["Home", "Story", "Process", "Products", "Impact"];
 
 export function Navbar() {
   return (
