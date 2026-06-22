@@ -27,7 +27,7 @@ export function Transformation() {
   }, []);
 
   return (
-    <section ref={ref} id="story" className="relative h-screen w-full overflow-hidden bg-beige text-primary-forest">
+    <section ref={ref} className="relative h-screen w-full overflow-hidden bg-beige text-primary-forest">
       <div className="absolute inset-0 grid md:grid-cols-2 items-center max-w-[1500px] mx-auto px-8 md:px-20 gap-10">
         {/* Visual */}
         <div className="relative h-[70vh] flex items-center justify-center">
