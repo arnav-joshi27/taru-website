@@ -2,17 +2,18 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import palmLeaf from "@/assets/palm-leaf.png";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
+import g1 from "@/assets/journey-collect.jpg.asset.json";
+import g2 from "@/assets/journey-prepare.jpg.asset.json";
+import g3 from "@/assets/journey-transform.jpg.asset.json";
+import g4 from "@/assets/journey-craft.jpg.asset.json";
 
 const stages = [
-  { n: "01", t: "Collect", d: "We recover dried leaves, fibres, and biodegradable plant waste that would otherwise go unused — working alongside farming and rural communities.", img: g1, icon: "❋" },
-  { n: "02", t: "Clean & Prepare", d: "Each material is washed, sun-dried, and inspected — readying nature's raw gift for its second life.", img: g2, icon: "❅" },
-  { n: "03", t: "Transform", d: "Through gentle heat, time, and craft, we upcycle natural materials into durable, biodegradable forms — no plastics, no chemicals.", img: g3, icon: "≋" },
-  { n: "04", t: "Craft & Share", d: "Skilled artisans shape every piece by hand, weaving generational knowledge into everyday essentials that return safely to the earth.", img: g4, icon: "✋" },
+  { n: "01", t: "Collect", d: "It begins in the quiet places — fallen leaves, dried fronds, and forgotten fibres gathered with care alongside the farming families who know this land best.", img: g1.url, icon: "❋" },
+  { n: "02", t: "Clean & Prepare", d: "Each leaf is washed by hand, laid out under the sun, and gently sorted — a slow ritual that prepares nature's offerings for a second life.", img: g2.url, icon: "❅" },
+  { n: "03", t: "Transform", d: "With warmth, patience, and craft passed down through generations, raw plant material becomes something lasting — biodegradable, beautiful, and entirely free of plastic or chemicals.", img: g3.url, icon: "≋" },
+  { n: "04", t: "Craft & Share", d: "Skilled artisans shape every piece by hand, weaving heritage into everyday objects — pieces meant to be used, loved, and returned softly to the earth.", img: g4.url, icon: "✋" },
 ];
+
 
 export function Journey() {
   const ref = useRef<HTMLDivElement>(null);
