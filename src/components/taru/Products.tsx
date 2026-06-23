@@ -11,7 +11,7 @@ import leafSilhouette from "@/assets/leaf-silhouette.png";
 const products = [
   { img: baskets.url, name: "Woven Mini Baskets", n: "01" },
   { img: comb.url, name: "Neem Wood Comb", n: "02" },
-  { img: pouches.url, name: "Handwoven Clutches", n: "03" },
+  { img: pouches.url, name: "Handwoven Pouches", n: "03" },
   { img: bag.url, name: "Palm Tote Bag", n: "04" },
 ];
 
