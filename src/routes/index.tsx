@@ -6,7 +6,6 @@ import { Transformation } from "@/components/taru/Transformation";
 import { Journey } from "@/components/taru/Journey";
 import { Products } from "@/components/taru/Products";
 import { Impact } from "@/components/taru/Impact";
-import { Story } from "@/components/taru/Story";
 import { Future } from "@/components/taru/Future";
 import { Footer } from "@/components/taru/Footer";
 import { FloatingLeaves } from "@/components/taru/FloatingLeaves";
@@ -33,7 +32,6 @@ function Index() {
       <Transformation />
       <Journey />
       <Products />
-      <Story />
       <Impact />
       <Future />
       <Footer />
