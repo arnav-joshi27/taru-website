@@ -80,9 +80,9 @@ export function Journey() {
             The <em className="text-accent-green not-italic">Transformation</em> Process
           </h2>
           <div className="w-20 h-px bg-accent-green/60 mx-auto my-6" />
-          <p className="text-beige/60 leading-relaxed max-w-md mx-auto">
-            From fallen palm leaves to beautiful, sustainable products —
-            here's how nature transforms with purpose.
+          <p className="text-beige/60 leading-relaxed max-w-lg mx-auto whitespace-pre-line">
+            Every product begins as a fallen palm leaf&nbsp;— nature's gift. Through ethical craftmanship and community-driven production, we turn what was discarded into lasting, biodegradable essentials that honour people, planet and promises a greener future.&nbsp;{"\n\n"}
+            Here's how nature transforms with purpose.
           </p>
         </div>
 
