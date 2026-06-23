@@ -2,10 +2,13 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import bananaLeaves from "@/assets/story-banana-leaves.png.asset.json";
+import fibres from "@/assets/story-fibres.png.asset.json";
 
 const paragraphs = [
-  "Taru began with a simple belief that beauty and purpose can emerge from what the world often overlooks. Guided by a deep respect for nature and traditional craftsmanship, we transform biodegradable plant materials into thoughtfully designed products that carry stories of renewal and care.",
-  "Rooted in sustainability and shaped by innovation, Taru seeks to foster conscious living while creating meaningful impact for communities and the environment. As our journey evolves, we remain devoted to building a future where thoughtful design and responsible choices become a natural part of everyday life.",
+  "Taru began with a question — what if what nature sheds could feed a family?",
+  "In quiet villages, we found generations of skill — hands that weave leaves, fibres, and grass into beauty.",
+  "We listened. We learned. We wove tradition into a future the planet can hold.",
+  "Today, every Taru product carries a story — of soil, of sun, of stubborn hope.",
 ];
 
 export function Story() {
@@ -36,13 +39,25 @@ export function Story() {
         <div className="absolute inset-0 bg-primary-forest/85" />
       </div>
       <div className="relative max-w-5xl mx-auto px-8 md:px-20 space-y-20">
+        <span className="text-xs uppercase tracking-[0.3em] text-accent-green/70">The Story of Taru</span>
         {paragraphs.map((p, i) => (
-          <p key={i} className="story-line font-display text-2xl md:text-4xl text-beige leading-[1.3] text-balance">
+          <p key={i} className="story-line font-display text-3xl md:text-6xl text-beige leading-[1.15] text-balance">
             {p.split(" ").map((w, j) => (
-              <span key={j} className="inline-block mr-2">{w}</span>
+              <span key={j} className="inline-block mr-3">{w}</span>
             ))}
           </p>
         ))}
+
+        <div className="story-line grid md:grid-cols-2 gap-6 pt-4">
+          <img src={fibres.url} alt="Natural plant fibres" loading="lazy" className="rounded-2xl aspect-[4/5] object-cover" />
+          <div className="flex flex-col justify-end">
+            <p className="text-beige/70 text-lg leading-relaxed">
+              From banana leaves and palm fronds to natural fibres and rattan —
+              we work with whatever nature offers, transforming what was overlooked
+              into objects of everyday beauty.
+            </p>
+          </div>
+        </div>
 
         <blockquote className="story-line border-l-2 border-accent-green pl-8 mt-20">
           <p className="font-display italic text-2xl md:text-3xl text-beige/80">

@@ -27,7 +27,7 @@ export function Transformation() {
   }, []);
 
   return (
-    <section ref={ref} className="relative h-screen w-full overflow-hidden bg-beige text-primary-forest">
+    <section ref={ref} id="story" className="relative h-screen w-full overflow-hidden bg-beige text-primary-forest">
       <div className="absolute inset-0 grid md:grid-cols-2 items-center max-w-[1500px] mx-auto px-8 md:px-20 gap-10">
         {/* Visual */}
         <div className="relative h-[70vh] flex items-center justify-center">
@@ -57,15 +57,16 @@ export function Transformation() {
             Rooted in Nature.<br />
             <em className="text-palm not-italic">Built for Tomorrow.</em>
           </h2>
-          <p className="tf-step text-lg leading-relaxed text-primary-forest/70 max-w-md whitespace-pre-line">
-            Taru began with a simple belief that beauty and purpose can emerge from what the world often overlooks. Guided by a deep respect for nature and traditional craftsmanship, we transform biodegradable plant materials into thoughtfully designed products that carry stories of renewal and care.{"\n\n\n\n\n"}
-            Rooted in sustainability and shaped by innovation, Taru seeks to foster conscious living while creating meaningful impact for communities and the environment. As our journey evolves, we remain devoted to building a future where thoughtful design and responsible choices become a natural part of everyday life.
+          <p className="tf-step text-lg leading-relaxed text-primary-forest/70 max-w-md">
+            Every product begins as a fallen palm leaf — nature's gift, not waste. 
+            Through ethical craftsmanship and community-driven production, 
+            we turn what was discarded into lasting, biodegradable essentials 
+            that honor people, planet, and the promise of a greener future.
           </p>
-          <a href="#impact" className="tf-step group inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em] border-b border-primary-forest pb-2 hover:text-palm transition-colors w-fit">
+          <button className="tf-step group inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em] border-b border-primary-forest pb-2 hover:text-palm transition-colors">
             Discover Our Impact
             <span className="group-hover:translate-x-2 transition-transform">→</span>
-          </a>
-
+          </button>
         </div>
       </div>
     </section>

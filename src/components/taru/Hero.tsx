@@ -104,7 +104,7 @@ export function Hero() {
           </span>
         </div>
         <h1 className="font-display text-[18vw] md:text-[14vw] leading-[0.85] text-beige tracking-tighter">
-          <span className="block overflow-hidden"><span className="hero-title-line inline-block"></span></span>
+          <span className="block overflow-hidden"><span className="hero-title-line inline-block">TARU</span></span>
         </h1>
         <div className="overflow-hidden mt-4">
           <p className="hero-sub max-w-md text-beige/70 text-base md:text-lg font-light leading-relaxed">
