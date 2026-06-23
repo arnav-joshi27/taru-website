@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import leafFan from "@/assets/leaf-fan.png";
+import igIcon from "@/assets/icon-instagram.png.asset.json";
+import liIcon from "@/assets/icon-linkedin.png.asset.json";
+import mailIcon from "@/assets/icon-gmail.png.asset.json";
 
 export function Footer() {
   return (
@@ -32,9 +35,15 @@ export function Footer() {
           <div>
             <div className="text-xs uppercase tracking-[0.2em] text-accent-green/70 mb-4">Enactus VITC</div>
             <div className="flex gap-3">
-              <a href="https://instagram.com/enactusvitc" target="_blank" rel="noreferrer noopener" aria-label="Instagram" className="w-10 h-10 grid place-items-center rounded-full border border-beige/20 hover:border-accent-green hover:text-accent-green text-xs transition">IG</a>
-              <a href="https://linkedin.com/company/enactus-vitc" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn" className="w-10 h-10 grid place-items-center rounded-full border border-beige/20 hover:border-accent-green hover:text-accent-green text-xs transition">LI</a>
-              <a href="mailto:enactus@vitchennai.ac.in" aria-label="Email" className="w-10 h-10 grid place-items-center rounded-full border border-beige/20 hover:border-accent-green hover:text-accent-green text-xs transition">@</a>
+              <a href="https://instagram.com/enactusvitc" target="_blank" rel="noreferrer noopener" aria-label="Instagram" className="w-10 h-10 grid place-items-center rounded-full bg-beige/5 border border-beige/20 hover:border-accent-green hover:scale-110 transition overflow-hidden">
+                <img src={igIcon.url} alt="" className="w-6 h-6 object-contain" />
+              </a>
+              <a href="https://linkedin.com/company/enactus-vitc" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn" className="w-10 h-10 grid place-items-center rounded-full bg-beige/5 border border-beige/20 hover:border-accent-green hover:scale-110 transition overflow-hidden">
+                <img src={liIcon.url} alt="" className="w-6 h-6 object-contain" />
+              </a>
+              <a href="mailto:enactus@vitchennai.ac.in" aria-label="Email" className="w-10 h-10 grid place-items-center rounded-full bg-beige/5 border border-beige/20 hover:border-accent-green hover:scale-110 transition overflow-hidden">
+                <img src={mailIcon.url} alt="" className="w-6 h-6 object-contain" />
+              </a>
             </div>
           </div>
         </div>
