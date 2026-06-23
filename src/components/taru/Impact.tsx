@@ -31,9 +31,9 @@ export function Impact() {
           <h2 className="font-display text-5xl md:text-7xl text-beige mt-4 leading-[0.95]">
             Aligned with the <em className="text-accent-green not-italic">Global Goals.</em>
           </h2>
-          <p className="text-beige/60 mt-6 leading-relaxed max-w-xl">
-            Taru's work directly advances the United Nations Sustainable Development Goals —
-            weaving circular economy, community empowerment, and environmental stewardship into every product.
+          <p className="text-beige/60 mt-6 leading-relaxed max-w-xl whitespace-pre-line">
+            From banana leaves and palm fronds to nature fibres and rattan, we work with what nature offers, transforming what was overlooked into objects of everyday beauty.&nbsp;{"\n\n\n"}
+            Taru's work directly advances the United Nations Sustainable Development Goals — weaving circular economy, community empowerment, and environmental stewardship into every product.
           </p>
         </div>
 
